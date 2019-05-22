@@ -27,41 +27,41 @@ Contents
 
 <li>
 
-<a href="#h-1"><span class="toc-secnum">1Â </span> Getting the data into
+<a href="#h-1"><span class="toc-secnum">1 </span> Getting the data into
 the stata working session.</a>
 
 </li>
 
 <li>
 
-<a href="#h-2"><span class="toc-secnum">2Â </span> Viewing the
+<a href="#h-2"><span class="toc-secnum">2 </span> Viewing the
 dataset.</a>
 
 </li>
 
 <li>
 
-<a href="#h-3"><span class="toc-secnum">3Â </span> Dataset Structure.</a>
+<a href="#h-3"><span class="toc-secnum">3 </span> Dataset Structure.</a>
 
 </li>
 
 <li>
 
-<a href="#h-4"><span class="toc-secnum">4Â </span> Selecting
+<a href="#h-4"><span class="toc-secnum">4 </span> Selecting
 Observations</a>
 
 <ul>
 
 <li>
 
-<a href="#h-4-1"><span class="toc-secnum">4.1Â </span> The
+<a href="#h-4-1"><span class="toc-secnum">4.1 </span> The
 <code>in</code> method</a>
 
 </li>
 
 <li>
 
-<a href="#h-4-2"><span class="toc-secnum">4.2Â </span> Selecting Data by
+<a href="#h-4-2"><span class="toc-secnum">4.2 </span> Selecting Data by
 condition <CODE>if</CODE></a>
 
 </li>
@@ -72,45 +72,45 @@ condition <CODE>if</CODE></a>
 
 <li>
 
-<a href="#h-5"><span class="toc-secnum">5Â </span> Missing Data</a>
+<a href="#h-5"><span class="toc-secnum">5 </span> Missing Data</a>
 
 </li>
 
 <li>
 
-<a href="#h-6"><span class="toc-secnum">6Â </span> Descriptive
+<a href="#h-6"><span class="toc-secnum">6 </span> Descriptive
 Statistics</a>
 
 </li>
 
 <li>
 
-<a href="#h-7"><span class="toc-secnum">7Â </span> Merging datasets</a>
+<a href="#h-7"><span class="toc-secnum">7 </span> Merging datasets</a>
 
 </li>
 
 <li>
 
-<a href="#h-8"><span class="toc-secnum">8Â </span> Dropping variables and
+<a href="#h-8"><span class="toc-secnum">8 </span> Dropping variables and
 observations.</a>
 
 <ul>
 
 <li>
 
-<a href="#h-8-1"><span class="toc-secnum">8.1Â </span> Variables</a>
+<a href="#h-8-1"><span class="toc-secnum">8.1 </span> Variables</a>
 
 </li>
 
 <li>
 
-<a href="#h-8-2"><span class="toc-secnum">8.2Â </span> Observations.</a>
+<a href="#h-8-2"><span class="toc-secnum">8.2 </span> Observations.</a>
 
 </li>
 
 <li>
 
-<a href="#h-8-3"><span class="toc-secnum">8.3Â </span> Using keep.</a>
+<a href="#h-8-3"><span class="toc-secnum">8.3 </span> Using keep.</a>
 
 </li>
 
@@ -124,7 +124,7 @@ observations.</a>
 
 <h2 id="h-1">
 
-<span class="heading-secnum">1Â </span> Getting the data into the stata
+<span class="heading-secnum">1 </span> Getting the data into the stata
 working session.
 
 </h2>
@@ -143,7 +143,7 @@ system data here quickly.
 
 <h2 id="h-2">
 
-<span class="heading-secnum">2Â </span> Viewing the dataset.
+<span class="heading-secnum">2 </span> Viewing the dataset.
 
 </h2>
 
@@ -152,8 +152,8 @@ system data here quickly.
 In STATA once you have loaded your dataset you can get a view of your
 dataset by running the <code>list</code> comand.Further you can specify
 how many rows by adding <code>in 1/number of rows</code> comand where
-the ânumber of rows us an integer representing the number of
-observations.â
+the number of rows us an integer representing the number of
+observations.
 
 </p>
 
@@ -191,7 +191,7 @@ Also note that in the data editor window you can rename your variable.
 
 <h2 id="h-3">
 
-<span class="heading-secnum">3Â </span> Dataset Structure.
+<span class="heading-secnum">3 </span> Dataset Structure.
 
 </h2>
 
@@ -265,13 +265,13 @@ concerning the variable else all
 
 <h2 id="h-4">
 
-<span class="heading-secnum">4Â </span> Selecting Observations
+<span class="heading-secnum">4 </span> Selecting Observations
 
 </h2>
 
 <h3 id="h-4-1">
 
-<span class="heading-secnum">4.1Â </span> The <code>in</code> method
+<span class="heading-secnum">4.1 </span> The <code>in</code> method
 
 </h3>
 
@@ -335,7 +335,7 @@ you can just tipe the code below.
 
 <h3 id="h-4-2">
 
-<span class="heading-secnum">4.2Â </span> Selecting Data by condition
+<span class="heading-secnum">4.2 </span> Selecting Data by condition
 <CODE>if</CODE>
 
 </h3>
@@ -373,13 +373,13 @@ than 15000 .
 Only four cars meet the condition set above.The & opperator makes stata
 to check if both conditions are met then scrapes off the data that
 satisfies it.Its important to note that in this dataset ,the label
-âdomesticâ was coded 0 and 1 for âforeignâ.
+domestic was coded 0 and 1 for foreign.
 
 </p>
 
 <h2 id="h-5">
 
-<span class="heading-secnum">5Â </span> Missing Data
+<span class="heading-secnum">5 </span> Missing Data
 
 </h2>
 
@@ -405,7 +405,7 @@ trunk variables where missing values are found.
 
 <h2 id="h-6">
 
-<span class="heading-secnum">6Â </span> Descriptive Statistics
+<span class="heading-secnum">6 </span> Descriptive Statistics
 
 </h2>
 
@@ -429,7 +429,7 @@ the summary is gotten.
 
 <h2 id="h-7">
 
-<span class="heading-secnum">7Â </span> Merging datasets
+<span class="heading-secnum">7 </span> Merging datasets
 
 </h2>
 
@@ -493,7 +493,7 @@ dataset.
 
 <h2 id="h-8">
 
-<span class="heading-secnum">8Â </span> Dropping variables and
+<span class="heading-secnum">8 </span> Dropping variables and
 observations.
 
 </h2>
@@ -508,7 +508,7 @@ the ate not just needed for analysis.Lets see how to work out this.
 
 <h3 id="h-8-1">
 
-<span class="heading-secnum">8.1Â </span> Variables
+<span class="heading-secnum">8.1 </span> Variables
 
 </h3>
 
@@ -527,7 +527,7 @@ variable names list.Below i am dropning the price variable.
 
 <h3 id="h-8-2">
 
-<span class="heading-secnum">8.2Â </span> Observations.
+<span class="heading-secnum">8.2 </span> Observations.
 
 </h3>
 
@@ -578,7 +578,7 @@ Below am dropping 5 observations from the dataset.
 
 <h3 id="h-8-3">
 
-<span class="heading-secnum">8.3Â </span> Using keep.
+<span class="heading-secnum">8.3 </span> Using keep.
 
 </h3>
 
