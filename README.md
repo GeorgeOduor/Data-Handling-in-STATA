@@ -1,52 +1,162 @@
 
 <body>
-<h1>Handling Data with stata.</h1>
 
-<p>STATA offers high profile data management capabilities which can be usefull for anay data analyst.In this tutorial we are going to handle various ways we can use to solve problems relating data.</p>
+<h1>
 
-<h4>Contents</h4>
+Handling Data with stata.
+
+</h1>
+
+<p>
+
+STATA offers high profile data management capabilities which can be
+usefull for anay data analyst.In this tutorial we are going to handle
+various ways we can use to solve problems relating data.
+
+</p>
+
+<h4>
+
+Contents
+
+</h4>
+
 <div class="toc">
-<ul>
-<li><a href="#h-1"><span class="toc-secnum">1&nbsp;</span> Getting the data into the stata working session.</a>
-</li>
-<li><a href="#h-2"><span class="toc-secnum">2&nbsp;</span> Viewing the dataset.</a>
-</li>
-<li><a href="#h-3"><span class="toc-secnum">3&nbsp;</span> Dataset Structure.</a>
-</li>
-<li><a href="#h-4"><span class="toc-secnum">4&nbsp;</span> Selecting Observations</a>
-<ul>
-<li><a href="#h-4-1"><span class="toc-secnum">4.1&nbsp;</span> The <code>in</code> method</a>
-</li>
-<li><a href="#h-4-2"><span class="toc-secnum">4.2&nbsp;</span> Selecting Data by condition <CODE>if</CODE></a>
-</li>
-</ul>
-</li>
-<li><a href="#h-5"><span class="toc-secnum">5&nbsp;</span> Missing Data</a>
-</li>
-<li><a href="#h-6"><span class="toc-secnum">6&nbsp;</span> Descriptive Statistics</a>
-</li>
-<li><a href="#h-7"><span class="toc-secnum">7&nbsp;</span> Merging datasets</a>
-</li>
-<li><a href="#h-8"><span class="toc-secnum">8&nbsp;</span> Dropping variables and observations.</a>
-<ul>
-<li><a href="#h-8-1"><span class="toc-secnum">8.1&nbsp;</span> Variables</a>
-</li>
-<li><a href="#h-8-2"><span class="toc-secnum">8.2&nbsp;</span> Observations.</a>
-</li>
-<li><a href="#h-8-3"><span class="toc-secnum">8.3&nbsp;</span> Using keep.</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<h2 id="h-1"><span class="heading-secnum">1&nbsp;</span> Getting the data into the stata working session.</h2>
 
-<P>For a faster view into how to ingest data into stata you can <a href="#"> see this post</a>.As for this one I will quickly ingest system data here quickly.</P>
+<ul>
+
+<li>
+
+<a href="#h-1"><span class="toc-secnum">1Â </span> Getting the data into
+the stata working session.</a>
+
+</li>
+
+<li>
+
+<a href="#h-2"><span class="toc-secnum">2Â </span> Viewing the
+dataset.</a>
+
+</li>
+
+<li>
+
+<a href="#h-3"><span class="toc-secnum">3Â </span> Dataset Structure.</a>
+
+</li>
+
+<li>
+
+<a href="#h-4"><span class="toc-secnum">4Â </span> Selecting
+Observations</a>
+
+<ul>
+
+<li>
+
+<a href="#h-4-1"><span class="toc-secnum">4.1Â </span> The
+<code>in</code> method</a>
+
+</li>
+
+<li>
+
+<a href="#h-4-2"><span class="toc-secnum">4.2Â </span> Selecting Data by
+condition <CODE>if</CODE></a>
+
+</li>
+
+</ul>
+
+</li>
+
+<li>
+
+<a href="#h-5"><span class="toc-secnum">5Â </span> Missing Data</a>
+
+</li>
+
+<li>
+
+<a href="#h-6"><span class="toc-secnum">6Â </span> Descriptive
+Statistics</a>
+
+</li>
+
+<li>
+
+<a href="#h-7"><span class="toc-secnum">7Â </span> Merging datasets</a>
+
+</li>
+
+<li>
+
+<a href="#h-8"><span class="toc-secnum">8Â </span> Dropping variables and
+observations.</a>
+
+<ul>
+
+<li>
+
+<a href="#h-8-1"><span class="toc-secnum">8.1Â </span> Variables</a>
+
+</li>
+
+<li>
+
+<a href="#h-8-2"><span class="toc-secnum">8.2Â </span> Observations.</a>
+
+</li>
+
+<li>
+
+<a href="#h-8-3"><span class="toc-secnum">8.3Â </span> Using keep.</a>
+
+</li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+<h2 id="h-1">
+
+<span class="heading-secnum">1Â </span> Getting the data into the stata
+working session.
+
+</h2>
+
+<P>
+
+For a faster view into how to ingest data into stata you can
+<a href="#"> see this post</a>.As for this one I will quickly ingest
+system data here quickly.
+
+</P>
+
 <pre id="stlog-1" class="stlog"><samp><span class="stinp">. sysuse auto.dta,clear</span>
 (1978 Automobile Data)
 </samp></pre>
-<h2 id="h-2"><span class="heading-secnum">2&nbsp;</span> Viewing the dataset.</h2>
-<p>In STATA once you have loaded your dataset you can get a view of your dataset by running the <code>list</code> comand.Further you can specify how many rows by adding <code>in 1/number of rows</code> comand where the "number of rows us an integer representing the number of observations."</p>
+
+<h2 id="h-2">
+
+<span class="heading-secnum">2Â </span> Viewing the dataset.
+
+</h2>
+
+<p>
+
+In STATA once you have loaded your dataset you can get a view of your
+dataset by running the <code>list</code> comand.Further you can specify
+how many rows by adding <code>in 1/number of rows</code> comand where
+the ânumber of rows us an integer representing the number of
+observations.â
+
+</p>
+
 <pre id="stlog-2" class="stlog"><samp><span class="stinp">. list in 1/5 <span class="stcmt">//lists the first five rows of data</span></span>
 
      +------------------------------------------------------------------------------------------------------------------+
@@ -59,17 +169,40 @@
   5. | <span class="stres">Buick Electra   7,827    15       4        4.0      20    4,080      222     43        350       2.41   Domestic </span>|
      +------------------------------------------------------------------------------------------------------------------+
 </samp></pre>
-<p>The <code>browse</code> and <code>edit</code> commmands can also be used to to open an interactive data viewing and editing modes respectively in stata pop up windows.</p>
+
+<p>
+
+The <code>browse</code> and <code>edit</code> commmands can also be used
+to to open an interactive data viewing and editing modes respectively in
+stata pop up windows.
+
+</p>
 
 <pre>
 browse //<i>opens stata data browser window</i>
 edit // <i>opens stata data editor window</i>
 </pre>
 
-<P>Also note that in the data editor window you can rename your variable.</P>
-<h2 id="h-3"><span class="heading-secnum">3&nbsp;</span> Dataset Structure.</h2>
+<P>
 
-<p>For a quick glimpse into the dataset structure you can run the <code>describe</code> command.This gives you information on how variables are stored in STATA</p>
+Also note that in the data editor window you can rename your variable.
+
+</P>
+
+<h2 id="h-3">
+
+<span class="heading-secnum">3Â </span> Dataset Structure.
+
+</h2>
+
+<p>
+
+For a quick glimpse into the dataset structure you can run the
+<code>describe</code> command.This gives you information on how
+variables are stored in STATA
+
+</p>
+
 <pre id="stlog-3" class="stlog"><samp><span class="stinp">. describe</span>
 
 Contains data from <span class="stres">C:\Program Files (x86)\Stata13\ado\base/a/auto.dta</span>
@@ -95,9 +228,23 @@ variable name   type    format     label      variable label
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Sorted by:  <span class="stres">foreign</span>
 </samp></pre>
-<P>We can see that the data has 74 observations and 12 features.The variable names ate also given and their labels alongside storage types.</P>
 
-<p>For a more refined detail about the dataset you are working with in stata ,<code>codebook</code> can be of great help in stata.When followed with a specific variable name the codebook returns infomation only concerning the variable else all</p>
+<P>
+
+We can see that the data has 74 observations and 12 features.The
+variable names ate also given and their labels alongside storage types.
+
+</P>
+
+<p>
+
+For a more refined detail about the dataset you are working with in
+stata ,<code>codebook</code> can be of great help in stata.When followed
+with a specific variable name the codebook returns infomation only
+concerning the variable else all
+
+</p>
+
 <pre id="stlog-4" class="stlog"><samp><span class="stinp">. codebook price </span>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -115,13 +262,33 @@ Sorted by:  <span class="stres">foreign</span>
            percentiles:        10%       25%       50%       75%       90%
 <span class="stres">                              3895      4195    5006.5      6342     11385</span>
 </samp></pre>
-<h2 id="h-4"><span class="heading-secnum">4&nbsp;</span> Selecting Observations</h2>
 
-<h3 id="h-4-1"><span class="heading-secnum">4.1&nbsp;</span> The <code>in</code> method</h3>
+<h2 id="h-4">
 
-<p>In stata we are able to select observations using the <code>in</code> method which specifies the number of observations we need in a given range.</p>
+<span class="heading-secnum">4Â </span> Selecting Observations
 
-<p>For example.</p>
+</h2>
+
+<h3 id="h-4-1">
+
+<span class="heading-secnum">4.1Â </span> The <code>in</code> method
+
+</h3>
+
+<p>
+
+In stata we are able to select observations using the <code>in</code>
+method which specifies the number of observations we need in a given
+range.
+
+</p>
+
+<p>
+
+For example.
+
+</p>
+
 <pre id="stlog-5" class="stlog"><samp><span class="stinp">. list price in 40/45 </span>
 
      +--------+
@@ -136,9 +303,23 @@ Sorted by:  <span class="stres">foreign</span>
  45. | <span class="stres"> 6,486 </span>|
      +--------+
 </samp></pre>
-<p>Lists 40<sup>th</sup> to 45<sup>th</sup> observations in the price variable in our dataset.In case of negative numbers STATA will return observations from the end.</p>
 
-<p>The <code>in</code> keyword can also accept leters for example if you are intrested of viewing the last 5 (tail) observations of your dataset you can just tipe the code below.</p>
+<p>
+
+Lists 40<sup>th</sup> to 45<sup>th</sup> observations in the price
+variable in our dataset.In case of negative numbers STATA will return
+observations from the end.
+
+</p>
+
+<p>
+
+The <code>in</code> keyword can also accept leters for example if you
+are intrested of viewing the last 5 (tail) observations of your dataset
+you can just tipe the code below.
+
+</p>
+
 <pre id="stlog-6" class="stlog"><samp><span class="stinp">. list in -5/L</span>
 
      +----------------------------------------------------------------------------------------------------------------+
@@ -151,11 +332,30 @@ Sorted by:  <span class="stres">foreign</span>
  74. | <span class="stres">Volvo 260     11,995    17       5        2.5      14    3,170      193     37        163       2.98   Foreign </span>|
      +----------------------------------------------------------------------------------------------------------------+
 </samp></pre>
-<h3 id="h-4-2"><span class="heading-secnum">4.2&nbsp;</span> Selecting Data by condition <CODE>if</CODE></h3>
 
-<p>This is used in cases where a dataset needs to be split into multiple files.Lets say you want to devide the dataset into two groups namely foreign or domestic or if its demographic data and you want males and females separated.</p>
+<h3 id="h-4-2">
 
-<p>Lets see miles per galon of  the domestic cars that have  a price greater than 15000 .</p>
+<span class="heading-secnum">4.2Â </span> Selecting Data by condition
+<CODE>if</CODE>
+
+</h3>
+
+<p>
+
+This is used in cases where a dataset needs to be split into multiple
+files.Lets say you want to devide the dataset into two groups namely
+foreign or domestic or if its demographic data and you want males and
+females separated.
+
+</p>
+
+<p>
+
+Lets see miles per galon of the domestic cars that have a price greater
+than 15000 .
+
+</p>
+
 <pre id="stlog-7" class="stlog"><samp><span class="stinp">. list mpg if foreign == 0 &amp; price &gt; 12000</span>
 
      +-----+
@@ -167,30 +367,58 @@ Sorted by:  <span class="stres">foreign</span>
  28. | <span class="stres"> 14 </span>|
      +-----+
 </samp></pre>
-<p>Only four cars meet the condition set above.The & opperator makes stata to check if both conditions are met then scrapes off the data that satisfies it.Its important to note that in this dataset ,the label "domestic" was coded 0 and 1 for "foreign".  </p>
 
-<h2 id="h-5"><span class="heading-secnum">5&nbsp;</span> Missing Data</h2>
+<p>
 
-To check any missing data in stata ,we can run the <code>if missing</code> comand as shown below.
+Only four cars meet the condition set above.The & opperator makes stata
+to check if both conditions are met then scrapes off the data that
+satisfies it.Its important to note that in this dataset ,the label
+âdomesticâ was coded 0 and 1 for âforeignâ.
+
+</p>
+
+<h2 id="h-5">
+
+<span class="heading-secnum">5Â </span> Missing Data
+
+</h2>
+
+To check any missing data in stata ,we can run the <code>if
+missing</code> comand as shown below.
+
 <pre id="stlog-8" class="stlog"><samp><span class="stinp">. list if missing()</span>
 </samp></pre>
+
 We can see that there is no missing information from the data above.
 
-Within the missing parentheses ,a particular variable can be added to specify where the missing data is being sought.
+Within the missing parentheses ,a particular variable can be added to
+specify where the missing data is being sought.
 
-Also before the missing <code>if</code> command,a list of variable can be specified.
+Also before the missing <code>if</code> command,a list of variable can
+be specified.
 
 <pre id="stlog-9" class="stlog"><samp><span class="stinp">. list mpg rep78 trunk if missing(gear_ratio)</span>
 </samp></pre>
-The code above tells stata to return observations in the mpg,rep and trunk variables where missing values are found.
 
-<h2 id="h-6"><span class="heading-secnum">6&nbsp;</span> Descriptive Statistics</h2>
+The code above tells stata to return observations in the mpg,rep and
+trunk variables where missing values are found.
 
-So what information is comtained in that dataset you are using?To get a quick glimpse of the summary statistics,You can run the <code>summary</code> command in the console.
+<h2 id="h-6">
 
-The summary command can be specified with a variable/variables infront of it,to summarize all the variables,it should be left empty.
+<span class="heading-secnum">6Â </span> Descriptive Statistics
 
-Note also that the summarize command can be shortened as sum and still the summary is gotten.
+</h2>
+
+So what information is comtained in that dataset you are using?To get a
+quick glimpse of the summary statistics,You can run the
+<code>summary</code> command in the console.
+
+The summary command can be specified with a variable/variables infront
+of it,to summarize all the variables,it should be left empty.
+
+Note also that the summarize command can be shortened as sum and still
+the summary is gotten.
+
 <pre id="stlog-10" class="stlog"><samp><span class="stinp">. summarize rep78 foreign</span>
 
     Variable |       Obs        Mean    Std. Dev.       Min        Max
@@ -198,21 +426,55 @@ Note also that the summarize command can be shortened as sum and still the summa
        rep78 |<span class="stres">        69    3.405797    .9899323          1          5</span>
      foreign |<span class="stres">        74    .2972973    .4601885          0          1</span>
 </samp></pre>
-<h2 id="h-7"><span class="heading-secnum">7&nbsp;</span> Merging datasets</h2>
 
-To merge datsets ,we call the <code>merge</code> command and specify which columns to use for merging.
+<h2 id="h-7">
+
+<span class="heading-secnum">7Â </span> Merging datasets
+
+</h2>
+
+To merge datsets ,we call the <code>merge</code> command and specify
+which columns to use for merging.
 
 Merge has so many options to choose from.
 
 <ol type="a">
-	<li>One-to-one merging;</li>
-	<li>Many-to-one merging</li>
-	<li>One-to-many  merging</li>
-	<li>Many-to-many merging</li>
-	<li>One-to-one merging by specified observation</li>
+
+<li>
+
+One-to-one merging;
+
+</li>
+
+<li>
+
+Many-to-one merging
+
+</li>
+
+<li>
+
+One-to-many merging
+
+</li>
+
+<li>
+
+Many-to-many merging
+
+</li>
+
+<li>
+
+One-to-one merging by specified observation
+
+</li>
+
 </ol>
 
-Merge produces a new variable ,_merge,containing ,numeric codes concerning the source and the cotents of each observation in the merged dataset.
+Merge produces a new variable ,\_merge,containing ,numeric codes
+concerning the source and the cotents of each observation in the merged
+dataset.
 
 <pre id="stlog-11" class="stlog"><samp><span class="stinp">. use "C:\Users\RuralNet011\Desktop\datascience\analysis\StataTest\Question 1 Stata Files\11.dta", clear</span>
 
@@ -228,40 +490,105 @@ Merge produces a new variable ,_merge,containing ,numeric codes concerning the s
     matched                  <span class="stres">             395</span>  (_merge==3)
     -----------------------------------------
 </samp></pre>
-<h2 id="h-8"><span class="heading-secnum">8&nbsp;</span> Dropping variables and observations.</h2>
 
-<p>At sompoint we may need to drop some varibles or observations in a data set.This is majorly caused by overprescence of missing vaulues or maybe the ate not just needed for analysis.Lets see how to work out this.</p>
+<h2 id="h-8">
 
-<h3 id="h-8-1"><span class="heading-secnum">8.1&nbsp;</span> Variables</h3>
+<span class="heading-secnum">8Â </span> Dropping variables and
+observations.
 
-<p>To drop a variable we use <code>drop</code> command followed with the variable names list.Below i am dropning the price variable.</p>
+</h2>
+
+<p>
+
+At sompoint we may need to drop some varibles or observations in a data
+set.This is majorly caused by overprescence of missing vaulues or maybe
+the ate not just needed for analysis.Lets see how to work out this.
+
+</p>
+
+<h3 id="h-8-1">
+
+<span class="heading-secnum">8.1Â </span> Variables
+
+</h3>
+
+<p>
+
+To drop a variable we use <code>drop</code> command followed with the
+variable names list.Below i am dropning the price variable.
+
+</p>
+
 <pre id="stlog-12" class="stlog"><samp><span class="stinp">. sysuse auto.dta ,clear</span>
 (1978 Automobile Data)
 
 <span class="stinp">. drop price</span>
 </samp></pre>
-<h3 id="h-8-2"><span class="heading-secnum">8.2&nbsp;</span> Observations.</h3>
 
-<p>To drop an observation,we use an <code>if</code> and/or <code>in</code> qualifier after the <code>drop command.</code></p>
+<h3 id="h-8-2">
 
-<P>By using logical operators you can specify more than one condition for dropping observations.</P>
+<span class="heading-secnum">8.2Â </span> Observations.
 
-<p>Below i am going to drop observations where the variable foreign column is domestic and price is greater than $ 6000.</p>
+</h3>
+
+<p>
+
+To drop an observation,we use an <code>if</code> and/or <code>in</code>
+qualifier after the <code>drop command.</code>
+
+</p>
+
+<P>
+
+By using logical operators you can specify more than one condition for
+dropping observations.
+
+</P>
+
+<p>
+
+Below i am going to drop observations where the variable foreign column
+is domestic and price is greater than $ 6000.
+
+</p>
+
 <pre id="stlog-13" class="stlog"><samp><span class="stinp">. sysuse auto.dta ,clear</span>
 (1978 Automobile Data)
 
 <span class="stinp">. drop if foreign == 1 &amp; price &gt; 6000</span>
 (9 observations deleted)
 </samp></pre>
-<p>And we can see that 9 observations are deleted.As mentioned above whe can use in to specify the number of observations to delete.</p>
 
-<p>Below am dropping 5 observations from the dataset.</p>
+<p>
+
+And we can see that 9 observations are deleted.As mentioned above whe
+can use in to specify the number of observations to delete.
+
+</p>
+
+<p>
+
+Below am dropping 5 observations from the dataset.
+
+</p>
+
 <pre id="stlog-14" class="stlog"><samp><span class="stinp">. drop in 1/5</span>
 (5 observations deleted)
 </samp></pre>
-<h3 id="h-8-3"><span class="heading-secnum">8.3&nbsp;</span> Using keep.</h3>
 
-<p>By using keep,you are telling stata to drop all variables except those that are specified or by using an if and/or in expression.</p>
+<h3 id="h-8-3">
+
+<span class="heading-secnum">8.3Â </span> Using keep.
+
+</h3>
+
+<p>
+
+By using keep,you are telling stata to drop all variables except those
+that are specified or by using an if and/or in expression.
+
+</p>
+
 <pre id="stlog-15" class="stlog"><samp><span class="stinp">. <span class="stcmt">// keeping only price,mpg and foreign variables </span></span>
 <span class="stinp">. </span>
 <span class="stinp">. keep price mpg foreign</span>
@@ -310,3 +637,6 @@ Merge produces a new variable ,_merge,containing ,numeric codes concerning the s
      +------------------------+
 </samp></pre>
 
+</body>
+
+</html>
